@@ -20,7 +20,9 @@
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Text="Special Requests: Order Items"
+        <TextBlock Grid.Column="1"  Grid.Row="1" Text="Special Requests:"
+                 HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <TextBlock Grid.Column="2" Grid.Row="1" Text="Order Items:"
                  HorizontalAlignment="Left" VerticalAlignment="Top" />
 
         <TextBlock
