@@ -6,10 +6,18 @@
     RequestedTheme="Dark">
     <Application.Resources>
         <Style TargetType="Button">
-            <Setter Property="FontSize" Value="32" />
+            <Setter Property="FontSize" Value="20" />
         </Style>
         <Style TargetType="TextBlock">
-            <Setter Property="FontSize" Value="32" />
+            <Setter Property="FontSize" Value="30" />
+        </Style>
+        <Style TargetType="ListView">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="GridView">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="10" />
         </Style>
     </Application.Resources>
 </Application>
