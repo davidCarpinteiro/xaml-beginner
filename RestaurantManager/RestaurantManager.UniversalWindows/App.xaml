@@ -3,20 +3,23 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:RestaurantManager.UniversalWindows"
+    xmlns:DataManager="using:RestaurantManager.Models"
     RequestedTheme="Dark">
     <Application.Resources>
+
         <Style TargetType="Button">
-            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontSize" Value="32" />
+            <Setter Property="BorderBrush" Value="LightBlue" />
         </Style>
         <Style TargetType="TextBlock">
-            <Setter Property="FontSize" Value="30" />
+            <Setter Property="FontSize" Value="32" />
         </Style>
         <Style TargetType="ListView">
-            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontSize" Value="25" />
             <Setter Property="Margin" Value="10" />
         </Style>
         <Style TargetType="GridView">
-            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontSize" Value="25" />
             <Setter Property="Margin" Value="10" />
         </Style>
     </Application.Resources>

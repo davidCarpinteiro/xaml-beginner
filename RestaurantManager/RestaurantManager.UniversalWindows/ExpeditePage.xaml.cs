@@ -13,6 +13,8 @@ namespace RestaurantManager.UniversalWindows
         public ExpeditePage()
         {
             this.InitializeComponent();
+            var app = (App)Application.Current;
+            this.grdOrders.ItemsSource = app.RestaurantData.OrderItems;
         }
 
         /// <summary>
@@ -27,6 +29,13 @@ namespace RestaurantManager.UniversalWindows
         private void btnGoHome_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            this.grdOrders.Items.Clear();
+            var app = (App)Application.Current;
+            app.RestaurantData.OrderItems = new System.Collections.ObjectModel.ObservableCollection<string> { };
         }
     }
 }

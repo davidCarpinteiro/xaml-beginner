@@ -33,16 +33,20 @@
         <TextBlock Grid.Column="2" Grid.Row="1" Text="Order Items:"
                  HorizontalAlignment="Left" VerticalAlignment="Top" />
 
-        <ListView Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Background="#cc0000">
+        <ListView Grid.Column="0" SelectionMode="Multiple"
+                  Grid.Row="2" Name="grdAvailableItems"
+                  Grid.RowSpan="2" DataContext="{Binding MenuItems}">
         </ListView>
-        <ListView Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Background="#cc00ff">
+        <ListView Grid.Column="2" Grid.Row="2" SelectionMode="None"
+                  Name="grdSelectedItems" Grid.RowSpan="2"
+                  DataContext="{CustomResource ResourceKey={.MenuItems}}">
         </ListView>
         <Button
             Grid.Column="0" Grid.Row="4"
             Content="Add to Order" HorizontalAlignment="Center"
-            VerticalAlignment="Center" />
+            VerticalAlignment="Center" Name="btnAddToOrder" Click="btnAddToOrder_Click" />
         <Button Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4"
-            Content="Submit Order"
-                 HorizontalAlignment="Center" VerticalAlignment="Center" />
+            Content="Submit Order" Name="btnSubmitOrder"
+                 HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnSubmitOrder_Click" />
     </Grid>
 </Page>

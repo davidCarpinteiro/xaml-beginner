@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManager.Models;
+using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -25,6 +26,8 @@ namespace RestaurantManager.UniversalWindows
             this.Suspending += OnSuspending;
         }
 
+        public DataManager RestaurantData { get; private set; }
+
         /// <summary>
         /// Invoked when the application is launched normally by the end user. Other entry points
         /// will be used such as when the application is launched to open a specific file.
@@ -40,6 +43,7 @@ namespace RestaurantManager.UniversalWindows
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
+            RestaurantData = new DataManager();
 
             Frame rootFrame = Window.Current.Content as Frame;
 
