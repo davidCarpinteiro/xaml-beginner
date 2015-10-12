@@ -5,6 +5,7 @@
     xmlns:local="using:RestaurantManager.UniversalWindows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{StaticResource DataManager}"
     mc:Ignorable="d">
 
     <Page.TopAppBar>
@@ -35,11 +36,12 @@
 
         <ListView Grid.Column="0" SelectionMode="Multiple"
                   Grid.Row="2" Name="grdAvailableItems"
-                  Grid.RowSpan="2" DataContext="{Binding MenuItems}">
+                  Grid.RowSpan="2"
+                  ItemsSource="{Binding MenuItems}">
         </ListView>
         <ListView Grid.Column="2" Grid.Row="2" SelectionMode="None"
                   Name="grdSelectedItems" Grid.RowSpan="2"
-                  DataContext="{CustomResource ResourceKey={.MenuItems}}">
+                  ItemsSource="{Binding CurrentlySelectedMenuItems}">
         </ListView>
         <Button
             Grid.Column="0" Grid.Row="4"
